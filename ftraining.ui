@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FTraining</class>
+ <widget class="QMainWindow" name="FTraining">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>637</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Learning Neural Network</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MyRes.qrc">
+    <normaloff>:/Images/C:/Users/Asus/Pictures/download.jpg</normaloff>:/Images/C:/Users/Asus/Pictures/download.jpg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>10</y>
+      <width>171</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Konfigurasi</string>
+    </property>
+    <widget class="QSpinBox" name="thresholdVal">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>255</number>
+     </property>
+     <property name="value">
+      <number>145</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>33</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Threshold Value</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>72</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Target Error</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="targetErrorVal">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>6</number>
+     </property>
+     <property name="minimum">
+      <double>0.000001000000000</double>
+     </property>
+     <property name="maximum">
+      <double>0.999999000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.000001000000000</double>
+     </property>
+     <property name="value">
+      <double>0.001000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>130</y>
+      <width>171</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Aksi</string>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show Threshold</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show Box Chars</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="showThresholdAction">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>30</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ShowBoxAction">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>57</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="gambarshow">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>431</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>429</width>
+       <height>359</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>240</y>
+      <width>171</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>GroupBox</string>
+    </property>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>23</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Iteration</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Current Error</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>77</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Complete</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="iterationVal">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>24</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="CurrErrorVal">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>50</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="CompleteVal">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>76</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionLoad_Weight_Neuron"/>
+   <addaction name="actionRun_Learning"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="MyRes.qrc">
+     <normaloff>:/Images/C:/Users/Asus/Pictures/openicon2.png</normaloff>:/Images/C:/Users/Asus/Pictures/openicon2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Image Learning</string>
+   </property>
+   <property name="toolTip">
+    <string>Open image Learning</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="MyRes.qrc">
+     <normaloff>:/Images/C:/Users/Asus/Pictures/saveicon.ico</normaloff>:/Images/C:/Users/Asus/Pictures/saveicon.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Save Weight Neuron</string>
+   </property>
+  </action>
+  <action name="actionRun_Learning">
+   <property name="icon">
+    <iconset resource="MyRes.qrc">
+     <normaloff>:/Images/C:/Users/Asus/Pictures/gearicon.png</normaloff>:/Images/C:/Users/Asus/Pictures/gearicon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run Learning</string>
+   </property>
+  </action>
+  <action name="actionLoad_Weight_Neuron">
+   <property name="icon">
+    <iconset resource="MyRes.qrc">
+     <normaloff>:/Images/C:/Users/Asus/Pictures/brain.png</normaloff>:/Images/C:/Users/Asus/Pictures/brain.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load Weight Neuron</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="MyRes.qrc"/>
+ </resources>
+ <connections/>
+</ui>

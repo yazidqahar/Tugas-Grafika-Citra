@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OCRNeural</class>
+ <widget class="QMainWindow" name="OCRNeural">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>618</width>
+    <height>411</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::WheelFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Running OCR</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MyRes.qrc">
+    <normaloff>:/Images/C:/Users/Asus/Pictures/download.jpg</normaloff>:/Images/C:/Users/Asus/Pictures/download.jpg</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>10</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Konfigurasi</string>
+    </property>
+    <widget class="QSpinBox" name="thresholdVal">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>255</number>
+     </property>
+     <property name="value">
+      <number>145</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>33</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Threshold Value</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>100</y>
+      <width>171</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Aksi</string>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show Threshold</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show Box Chars</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="showThresholdAction">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>30</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ShowBoxAction">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>57</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>431</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>429</width>
+       <height>179</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextEdit" name="resultOCR">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>421</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gambarshow">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Training"/>
+   <addaction name="actionLoad_Image"/>
+   <addaction name="actionLoad_Neural"/>
+   <addaction name="actionRun_OCR"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Training">
+   <property name="icon">
+    <iconset resource="MyRes.qrc">
+     <normaloff>:/Images/C:/Users/Asus/Pictures/learning_icon.png</normaloff>:/Images/C:/Users/Asus/Pictures/learning_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Training</string>
+   </property>
+  </action>
+  <action name="actionLoad_Image">
+   <property name="icon">
+    <iconset resource="MyRes.qrc">
+     <normaloff>:/Images/C:/Users/Asus/Pictures/openicon2.png</normaloff>:/Images/C:/Users/Asus/Pictures/openicon2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load Image</string>
+   </property>
+  </action>
+  <action name="actionRun_OCR">
+   <property name="icon">
+    <iconset resource="MyRes.qrc">
+     <normaloff>:/Images/C:/Users/Asus/Pictures/gearicon.png</normaloff>:/Images/C:/Users/Asus/Pictures/gearicon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run OCR</string>
+   </property>
+  </action>
+  <action name="actionLoad_Neural">
+   <property name="icon">
+    <iconset resource="MyRes.qrc">
+     <normaloff>:/Images/C:/Users/Asus/Pictures/brain.png</normaloff>:/Images/C:/Users/Asus/Pictures/brain.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load Weight Neural</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MyRes.qrc"/>
+ </resources>
+ <connections/>
+</ui>

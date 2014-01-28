@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>C:/Users/Asus/Pictures/learning_icon.png</file>
+        <file>C:/Users/Asus/Pictures/saveicon.ico</file>
+        <file>C:/Users/Asus/Pictures/openicon2.png</file>
+        <file>C:/Users/Asus/Pictures/gearicon.png</file>
+        <file>C:/Users/Asus/Pictures/brain.png</file>
+        <file>C:/Users/Asus/Pictures/download.jpg</file>
+    </qresource>
+</RCC>
